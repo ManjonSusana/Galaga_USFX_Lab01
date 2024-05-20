@@ -9,6 +9,7 @@
 #include "C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/ComponenteInventario.cpp"
 #include "C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/ComponenteMovimiento.cpp"
 #include "C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/DircetorNave.cpp"
+#include "C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/FacadeDisparos.cpp"
 #include "C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/Foton.cpp"
 #include "C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/Galaga_USFX_L01.cpp"
 #include "C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/Galaga_USFX_L01GameMode.cpp"

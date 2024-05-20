@@ -43,9 +43,6 @@ C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/Componen
 C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/DircetorNave.cpp
 C:\Users\manjo\Desktop\copiass\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\DircetorNave.h
 C:\Users\manjo\Desktop\copiass\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\DircetorNave.generated.h
-C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/FacadeDisparos.cpp
-C:\Users\manjo\Desktop\copiass\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\FacadeDisparos.h
-C:\Users\manjo\Desktop\copiass\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\FacadeDisparos.generated.h
 C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/Foton.cpp
 C:\Users\manjo\Desktop\copiass\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\Foton.h
 C:\Users\manjo\Desktop\copiass\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Foton.generated.h
@@ -158,7 +155,6 @@ C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/NaveEnem
 C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/NaveEnemigaBichoAndante.cpp
 C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/NaveEnemigaBichoFactory.cpp
 C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/NaveEnemigaBichoVolador.cpp
-C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/NaveEnemigaCaza.cpp
 C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/NaveEnemigaCazaDisparos.cpp
 C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/NaveEnemigaCazaFactory.cpp
 C:/Users/manjo/Desktop/copiass/Galaga_USFX_LAB01/Source/Galaga_USFX_L01/NaveEnemigaCazaFlechas.cpp

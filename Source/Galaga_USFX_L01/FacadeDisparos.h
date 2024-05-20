@@ -22,7 +22,15 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+private:
+	TArray<AActor*> municion;
+	class ABomba* bomba;
+	class ALaser* laser;
+	class AFoton* foton;
+
+	class AFacadeAdRecargar* recargar;
+
 public:
 	void launch();  //LANZAR DISPARO
-	void recargar(); //RECARGAR DISPARO
 };

@@ -19,6 +19,8 @@ private:
 	float FireRate; // Velocidad de disparo
 
 	int TiempoTranscurrido;
+	//facade disparos
+	class AFacadeDisparos* disparos; 
 
 public:
 	ANaveEnemigaCaza();

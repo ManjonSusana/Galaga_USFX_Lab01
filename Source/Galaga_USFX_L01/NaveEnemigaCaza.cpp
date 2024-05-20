@@ -5,6 +5,7 @@
 #include "Galaga_USFX_L01Projectile.h"
 #include "Galaga_USFX_L01GameMode.h"
 #include "ProyectilEnemigo.h"
+#include "FacadeDisparos.h"
 #include "Kismet/GameplayStatics.h" 
 
 ANaveEnemigaCaza::ANaveEnemigaCaza()
@@ -26,6 +27,11 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 void ANaveEnemigaCaza::BeginPlay()
 {
 		Super::BeginPlay(); 
+
+		disparos = GetWorld()->SpawnActor<AFacadeDisparos>(AFacadeDisparos::StaticClass());
+		FTimerHandle timeDisparo;
+		GetWorldTimerManager().SetTimer(timeDisparo, this, &ANaveEnemigaCaza::Disparar, 2.0f, true, 0.0f);
+
 		
 }
 
@@ -34,17 +40,17 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 	Super::Tick(DeltaTime); 
 	//Disparos
 
-	TiempoTranscurrido++;
-	if (TiempoTranscurrido > 300) {
-		UWorld* const World = GetWorld();
-		if (World != nullptr)
-		{
-			FVector PosicionProyectilEnemigo = GetActorLocation() + FVector(0.0f, 0.0f, 0.0f); //posicion del proyectil enemigo
-			World->SpawnActor <AProyectilEnemigo>(PosicionProyectilEnemigo, FRotator::ZeroRotator); //spawneo proyectil
-		}
-		TiempoTranscurrido = 0;
+	//TiempoTranscurrido++;
+	//if (TiempoTranscurrido > 300) {
+	//	UWorld* const World = GetWorld();
+	//	if (World != nullptr)
+	//	{
+	//		FVector PosicionProyectilEnemigo = GetActorLocation() + FVector(0.0f, 0.0f, 0.0f); //posicion del proyectil enemigo
+	//		World->SpawnActor <AProyectilEnemigo>(PosicionProyectilEnemigo, FRotator::ZeroRotator); //spawneo proyectil
+	//	}
+	//	TiempoTranscurrido = 0;
 
-	}
+	//}
 }
 
 
@@ -58,6 +64,7 @@ void ANaveEnemigaCaza::Mover(float DeltaTime)
 void ANaveEnemigaCaza::Disparar()
 {
 
+	disparos->launch();
 }
 
 void ANaveEnemigaCaza::Atacar()
