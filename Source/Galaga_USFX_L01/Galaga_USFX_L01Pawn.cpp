@@ -49,13 +49,13 @@ AGalaga_USFX_L01Pawn::AGalaga_USFX_L01Pawn()
 	// Movement
 	MoveSpeed = 1000.0f;
 	// Weapon
-	GunOffset = FVector(90.f, 0.f, 0.f);
+	GunOffset = FVector(90.f, 0.f, 0.f); 
 	GunOffset2 = FVector(90.f, 90.f, 0.f);
-	FireRate = 0.1f; //ES PARA 
+	FireRate = 0.1f; //es el tiempo de disparo
 	bCanFire = true;
 
 	//salud
-	salud = 100.0f;
+	Vidas = 10.0f;
 
 
 	MiInventario = CreateDefaultSubobject<UComponenteInventario>("MiInventario");
@@ -184,6 +184,17 @@ void AGalaga_USFX_L01Pawn::ShotTimerExpired()
 	bCanFire = true;
 }
 
+void AGalaga_USFX_L01Pawn::RecibirDano(int dano)
+{
+	Vidas -= dano;
+	UE_LOG(LogTemp, Warning, TEXT("Vidas restantes: %d"), Vidas); // Depuración
+
+	if (Vidas <= 0)
+	{
+		Destroy();
+	}
+}
+
 void AGalaga_USFX_L01Pawn::DropItem()
 {
 	if (MiInventario->CurrentInventory.Num() == 0)
@@ -234,21 +245,24 @@ void AGalaga_USFX_L01Pawn::TakeItem(ACapsulaMotor* InventarioItem)
 	InventarioItem->PickUp();
 	MiInventario->AgregarAlInventario(InventarioItem);
 	MoveSpeed = MoveSpeed * 2.0f;
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Velocidad maxima"));
+	//Velocidad Normal
 	GetWorld()->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AGalaga_USFX_L01Pawn::VelocidadNormal, 5.0);
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Velocidad maxima"));
+	
 }
 
 void AGalaga_USFX_L01Pawn::TakeItemArma(ACapsulaArma* InventarioItemArma)
 {
 	InventarioItemArma->PickUp();
 	MiInventarioArma->AgregarAlInventarioArma(InventarioItemArma);
-	
-	
 	//Para la mejora del disparo mas rapido
 	FireRate = FireRate* 0.08f;
-
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Disparo Rapido"));
+	//Disparo normal
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AGalaga_USFX_L01Pawn::DisparoNormal, 5.0);
+
+	
 
 
 }
@@ -290,6 +304,11 @@ void AGalaga_USFX_L01Pawn::Regresar()  ///realizar el movimeinto
 void AGalaga_USFX_L01Pawn::VelocidadNormal()
 {
 	MoveSpeed = 1000.0f;
+}
+
+void AGalaga_USFX_L01Pawn::DisparoNormal()
+{
+	FireRate = 0.1f;
 }
 
 

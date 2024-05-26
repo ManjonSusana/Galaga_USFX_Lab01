@@ -6,6 +6,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Engine/StaticMesh.h"
+#include "NaveEnemiga.h"
 
 AGalaga_USFX_L01Projectile::AGalaga_USFX_L01Projectile() 
 {
@@ -35,6 +36,13 @@ AGalaga_USFX_L01Projectile::AGalaga_USFX_L01Projectile()
 
 void AGalaga_USFX_L01Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
+	ANaveEnemiga* NaveEnemiga = Cast<ANaveEnemiga>(OtherActor);
+	if (NaveEnemiga) 
+	{
+		NaveEnemiga->Destroy();
+	}
+
+
 	// Only add impulse and destroy projectile if we hit a physics
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr) && OtherComp->IsSimulatingPhysics())
 	{

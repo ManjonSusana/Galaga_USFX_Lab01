@@ -17,6 +17,7 @@ void ANaveEnemigaCazaDisparos::BeginPlay()
 void ANaveEnemigaCazaDisparos::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
 }
 
 

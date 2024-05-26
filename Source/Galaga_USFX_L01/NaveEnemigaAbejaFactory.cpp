@@ -14,5 +14,10 @@ ANaveEnemiga* ANaveEnemigaAbejaFactory::CrearNave(FString nave, UWorld* World, F
 		//spawn NaveEnemiegAbeja
 		return World->SpawnActor<ANaveEnemigaAbeja>(SpawnLocation, SpawnRotation);
 	}
+	if (nave == "AbejaComun") {
+
+		//spawn NaveEnemiegAbeja
+		return World->SpawnActor<ANaveEnemigaAbejaComun>(SpawnLocation, SpawnRotation);
+	}
 	return nullptr;
 }

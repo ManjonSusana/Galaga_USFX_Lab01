@@ -8,7 +8,7 @@ ANaveEnemigaAbeja::ANaveEnemigaAbeja()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	//PrimaryActorTick.bCanEverTick = true;
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/MALLAS/c3bc960d8210_navee_enemiga_ABEJA.c3bc960d8210_navee_enemiga_ABEJA'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/TwinStick/Meshes/TwinStickUFO4.TwinStickUFO4'"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 	PrimaryActorTick.bCanEverTick = true;
 	GetActorRelativeScale3D();

@@ -20,6 +20,8 @@ class AGalaga_USFX_L01Pawn : public APawn
 {
 	GENERATED_BODY()
 	
+private:
+	int Vidas; // Número de vidas del Pawn 
 
 	/* The mesh component */
 	UPROPERTY(Category = Mesh, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
@@ -82,6 +84,9 @@ public:
 	static const FName MoveRightBinding;
 	static const FName FireForwardBinding;
 	static const FName FireRightBinding;
+
+	void RecibirDano(int Dano); // Método para recibir daño 
+
 public:
 	UPROPERTY()
 	UComponenteInventario* MiInventario; //Componente de inventario
@@ -132,6 +137,7 @@ public:
     
 	virtual void Regresar();
 	virtual void VelocidadNormal();
+	virtual void DisparoNormal();
 
 };
 

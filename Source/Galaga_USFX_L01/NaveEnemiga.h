@@ -30,7 +30,7 @@ protected:
 	float energia;
 
 	// Declaración del componente de movimiento de naves
-	UComponenteMovimiento* MovimientoNavesComponent;
+	//UComponenteMovimiento* MovimientoNavesComponent;
 	
 
 public:
@@ -92,4 +92,5 @@ protected:  //creacion clase abstracta
 	void Disparar() PURE_VIRTUAL(ANaveEnemiga::Disparar, );
 	void Atacar() PURE_VIRTUAL(ANaveEnemiga::Atacar, );
 	void Escapar() PURE_VIRTUAL(ANaveEnemiga::Escapar, );
+	void Botar() PURE_VIRTUAL(ANaveEnemiga::Botar, );
 };

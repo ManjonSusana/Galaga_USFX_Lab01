@@ -12,7 +12,7 @@ UComponenteMovimiento::UComponenteMovimiento()
 
 	// ...
 	velocidad = 300.0f;
-	limiteDerecha = 100.0f;
+	limiteDerecha = -1200.0f;
 	limiteIzquierda = -1800.0f;
 	verificacion = true;
 

@@ -2,16 +2,23 @@
 
 
 #include "NaveEnemigaMariposa.h"
+#include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
 ANaveEnemigaMariposa::ANaveEnemigaMariposa()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/MALLAS/0fcbbf768755_necesito_una_maripo.0fcbbf768755_necesito_una_maripo'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/TwinStick/Meshes/TwinStickUFO2.TwinStickUFO2'"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 
 	PrimaryActorTick.bCanEverTick = true;
 	GetActorRelativeScale3D();
 	SetActorScale3D(FVector(1.5f, 1.5f, 1.5f));
+
+	// Inicializa los parámetros de movimiento circular
+	TiempoDeCambioDeEtapas = 10.0f;
+	TiempoDePersecucion = 10.0f;
+	TiempoEntrePersecuciones = 20.0f;
+	bPersecucionActiva = false;
 
 }
 
@@ -31,19 +38,26 @@ void ANaveEnemigaMariposa::Tick(float DeltaTime)
 
 void ANaveEnemigaMariposa::Mover(float DeltaTime)
 {
-	//velocidad = 300.0f; // ir cambiando velocidades
-	//SetActorLocation(FVector(GetActorLocation().X - velocidad, GetActorLocation().Y, GetActorLocation().Z));
+	
 }
 
-void ANaveEnemigaMariposa::Disparar()
+void ANaveEnemigaMariposa::MoverEnCirculo(float DeltaTime)
 {
+	
 }
-
 void ANaveEnemigaMariposa::Atacar()
 {
+	
 }
 
-void ANaveEnemigaMariposa::Escapar()
+void ANaveEnemigaMariposa::SetPawnTarget(AGalaga_USFX_L01Pawn* NewPawn)
 {
+	
 }
+
+void ANaveEnemigaMariposa::PerseguirPawn(float DeltaTime)
+{
+	
+}
+
 

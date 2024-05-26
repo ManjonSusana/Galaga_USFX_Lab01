@@ -1,25 +1,15 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "ProyectilEnemigo.h"
-#include"NaveEnemiga.h"
+#include "NaveEnemiga.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "Galaga_USFX_L01Pawn.h"
 #include "Engine/StaticMesh.h"
+#include "Kismet/GameplayStatics.h"
 
-void AProyectilEnemigo::MovimientoProyectil()
-{
-}
-void AProyectilEnemigo::Impacto()
-{
-}
 
-void AProyectilEnemigo::ProyectilEnemigo()
-{
-}
-// Sets default values
 AProyectilEnemigo::AProyectilEnemigo()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -32,7 +22,7 @@ AProyectilEnemigo::AProyectilEnemigo()
 	ProyectilEnemyMesh->SetupAttachment(RootComponent);
 
 	velocidad = 1000;
-	dano = 10;
+	dano = 1;
 	GetActorRelativeScale3D();
 	SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));
 
@@ -42,6 +32,7 @@ AProyectilEnemigo::AProyectilEnemigo()
 void AProyectilEnemigo::BeginPlay()
 {
 	Super::BeginPlay();
+	SetTargePawn();
 	
 }
 
@@ -53,7 +44,29 @@ void AProyectilEnemigo::Tick(float DeltaTime)
 }
 void AProyectilEnemigo::Mover()
 {
-	FVector NewLocation = GetActorLocation() + -GetActorForwardVector() * velocidad * GetWorld()->GetDeltaSeconds();
-	SetActorLocation(NewLocation);
+	if (Pawn)
+	{
+		FVector Direction = (Pawn->GetActorLocation() - GetActorLocation()).GetSafeNormal();
+		FVector NewLocation = GetActorLocation() + Direction * velocidad * GetWorld()->GetDeltaSeconds();
+		SetActorLocation(NewLocation);
+	}
+}
+
+void AProyectilEnemigo::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{
+	AGalaga_USFX_L01Pawn* HiPawn = Cast<AGalaga_USFX_L01Pawn>(Other);
+
+	if (HiPawn)
+	{
+		HiPawn->RecibirDano(dano); // Reduce la salud del Pawn
+		Destroy();
+	}
+
+}
+
+void AProyectilEnemigo::SetTargePawn()
+{
+	Pawn = Cast<AGalaga_USFX_L01Pawn>(UGameplayStatics::GetPlayerPawn(this, 0));
+
 }
 

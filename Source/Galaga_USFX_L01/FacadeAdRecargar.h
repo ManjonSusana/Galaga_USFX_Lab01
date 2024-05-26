@@ -26,5 +26,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
 	FORCEINLINE TArray<AActor*> recargarmunicion();
 };

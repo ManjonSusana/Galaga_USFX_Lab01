@@ -19,8 +19,18 @@ private:
 	float FireRate; // Velocidad de disparo
 
 	int TiempoTranscurrido;
-	//facade disparos
+
+	//fACADE DISPAROS 
 	class AFacadeDisparos* disparos; 
+
+	// Variables para el movimiento
+	FVector PosicionInicial;
+	float MoveSpeed;
+	float VerticalSpeed;
+	float MaxVerticalOffset;
+	float CurrentVerticalOffset;
+	bool MovingUp;
+
 
 public:
 	ANaveEnemigaCaza();
@@ -45,10 +55,13 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
-	virtual void Mover(float DeltaTime);
-	virtual void Disparar();
-	virtual void Atacar();
+	void Mover(float DeltaTime);
+	void Disparar();
+
 	FTimerHandle TimerHandle_ShotTimerExpired; // Timer para controlar el tiempo de disparo
-	virtual void Escapar();
+private:
+	void Atacar() {};
+	void Escapar() {};
+
 
 };

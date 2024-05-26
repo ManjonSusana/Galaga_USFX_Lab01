@@ -30,7 +30,7 @@ void AFacadeAdRecargar::Tick(float DeltaTime)
 
 TArray<AActor*> AFacadeAdRecargar::recargarmunicion()
 {
-	for (int i = 0; i < 15; i++)
+	for (int i = 0; i < 15; i++) 
 	{//quiero almacenar en el array de manera aleatoria los 3 tipos de municion
 		if (i % 5 == 0 || i == 0) {
 			municionAleatoria = rand() % 2;
@@ -47,4 +47,3 @@ TArray<AActor*> AFacadeAdRecargar::recargarmunicion()
 	}
 	return municiones;
 }
-
