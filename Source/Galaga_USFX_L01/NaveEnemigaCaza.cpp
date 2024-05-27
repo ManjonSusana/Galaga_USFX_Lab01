@@ -67,7 +67,7 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 void ANaveEnemigaCaza::Mover(float DeltaTime)
 {
 	
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("MOVIMIENTO DE LA NAVE CAZA"));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("MOVIMIENTO DE LA NAVE CAZA"));
 	// Obtener la ubicación actual del actor
 	FVector CurrentLocation = GetActorLocation();
 

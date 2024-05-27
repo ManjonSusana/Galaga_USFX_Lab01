@@ -18,8 +18,12 @@ void AGalaga_USFX_L01GameMode::BeginPlay() {
 	Super::BeginPlay();
 
 	Facade= GetWorld()->SpawnActor<AFacadeGenerador>(AFacadeGenerador::StaticClass());
+	//solo Fabrica de de las naves Enemiags
 	Facade-> FabricarNaves();
 	Facade->FaabricarBuider();
 	Facade->FabricarNavesAtaque();
 	Facade->FabricarNavesDisparo();
+	//solo de las torres enemigas
+	Facade-> TorresEnemigas();
+
 }

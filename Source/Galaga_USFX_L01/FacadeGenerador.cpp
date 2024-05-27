@@ -17,6 +17,8 @@
 #include "CapsulaMotor.h"
 #include "CapsulaArma.h"
 #include "CapsulaVida.h"
+#include "TorreEnemiga1.h"
+#include "TorreEnemiga2.h"
 
 // Sets default values
 AFacadeGenerador::AFacadeGenerador()
@@ -30,7 +32,15 @@ AFacadeGenerador::AFacadeGenerador()
 void AFacadeGenerador::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	Edificios = TArray<ATorreEnemiga*>();
+	Eventos = TArray<FString>();
+	//instanciar torres enemigas
+	ATorreEnemiga1* torre1 = GetWorld()->SpawnActor<ATorreEnemiga1>(ATorreEnemiga1::StaticClass());
+	ATorreEnemiga2* torre2 = GetWorld()->SpawnActor<ATorreEnemiga2>(ATorreEnemiga2::StaticClass());
+
+	Edificios.Add(torre1);
+	Edificios.Add(torre2);
 }
 
 // Called every frame
@@ -38,6 +48,31 @@ void AFacadeGenerador::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
+void AFacadeGenerador::RealizarEventos(TArray<ATorreEnemiga*> MisTorres, TArray<FString> MisEventos)
+{
+	for (ATorreEnemiga* MiTorre : MisTorres)
+	{
+		MiTorre->RecibirEvento(MisEventos, this);
+	}
+}
+//Anadienodo a las TorresEnemigas los eventos 
+void AFacadeGenerador::TorresEnemigas()
+{
+	Eventos.Empty();
+	Eventos.Add("CrearTorreEnemiga");
+
+	RealizarEventos(Edificios, Eventos);
+	Eventos.Empty();
+
+	Eventos.Add("AnadirMovimiento");
+	RealizarEventos(Edificios, Eventos);
+	Eventos.Empty();
+
+	Eventos.Add("AnadirDisparo");
+
+	RealizarEventos(Edificios, Eventos);
+}
+
 
 void AFacadeGenerador::FabricarNaves()
 {
@@ -150,5 +185,3 @@ void AFacadeGenerador::FabricarNavesDisparo()
 		}
 	}
 }
-
-
