@@ -86,7 +86,9 @@ public:
 	static const FName FireRightBinding;
 
 	void RecibirDano(int Dano); // Método para recibir daño 
-
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 public:
 	UPROPERTY()
 	UComponenteInventario* MiInventario; //Componente de inventario
@@ -136,6 +138,7 @@ public:
 	//FORCEINLINE float GetVida() const { return vida; }
     
 	virtual void Regresar();
+
 	virtual void VelocidadNormal();
 	virtual void DisparoNormal();
 

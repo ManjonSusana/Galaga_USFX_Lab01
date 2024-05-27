@@ -19,14 +19,21 @@ public:
 private:
 	
 	FTimerHandle TimerHandle_CambioDeEtapas;
+	FTimerHandle TimerHandle_Persecucion;
+	FTimerHandle TimerHandle_Regreso;
+
 	bool bPersecucionActiva;
+	bool bRegresando;
+
 	FVector PosicionInicial;
-	float TiempoDePersecucion;
-	float TiempoEntrePersecuciones;
 	float TiempoDeCambioDeEtapas;
+	float MoveSpeed;  // Velocidad de movimiento
+	AGalaga_USFX_L01Pawn* PawnTarget; // Variable para almacenar el objetivo Pawn
 
 	void MoverEnCirculo(float DeltaTime);
 	void PerseguirPawn(float DeltaTime);
+	void RegresarAInicio(float DeltaTime);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -40,8 +47,13 @@ protected:
 	void Atacar();
 	void SetPawnTarget(AGalaga_USFX_L01Pawn* NewPawn); // Método para establecer el objetivo Pawn
 
+private:
+	void ActivarPersecucion();
+	void ActivarRegreso();
+	void ReanudarMovimientoCircular();
 
 private:
 	void Disparar() {};
 	void Escapar() {};
+	
 };

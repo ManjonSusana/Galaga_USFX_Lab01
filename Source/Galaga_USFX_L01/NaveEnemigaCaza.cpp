@@ -16,7 +16,7 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 	//mallaNaveEnemiga = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 	GetActorRelativeScale3D();
-	SetActorScale3D(FVector(1.5f, 1.5f, 1.5f));
+	SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));
 
 	bCanFire = false;//puede disparar
 

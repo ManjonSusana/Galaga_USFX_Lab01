@@ -44,15 +44,9 @@ void AFacadeGenerador::FabricarNaves()
 	// spawneo naves enemigas
 	FVector ubicacionInicioNavesEnemigasCaza = FVector(200.0f, -900.0f, 250.f);
 	FVector ubicacionInicioNavesEnemigasTransporte = FVector(400.0f, -900.0f, 250.0f);
-	FVector ubicacionInicioNavesEnemigasBicho = FVector(600.0f, -900.0f, 250.f);
-	FVector ubicacionInicioNavesEnemigasAbeja = FVector(800.0f, -900.0f, 250.f);
-	FVector ubicacionInicioNavesEnemigasMariposa = FVector(1000.0f, -900.0f, 250.f);
-	FVector ubicacionInicioNavesEnemigasAbejaComun = FVector(200.0f, -900.0f, 250.f);
 
-	FRotator rotacionNave = FRotator(0.0f, 180.0f, 0.0f);
+	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
 
-	//const int32 NumeroDeColumnasCaza = 1; // N° COLUMNAS
-	//const int32 NumeroDeFilasCaza = 5;    //  N° FILAS
 
 	UWorld* const World = GetWorld();
 	if (World != nullptr)
@@ -68,35 +62,6 @@ void AFacadeGenerador::FabricarNaves()
 				FVector PosicionNaveActual = FVector(nuevaposicionTransporte, ubicacionInicioNavesEnemigasTransporte.Y + j * 200, ubicacionInicioNavesEnemigasTransporte.Z);
 				ANaveEnemiga* NuevaNaveTransporte = ANaveEnemigaTransporteFactory::CrearNave("Transporte", World, PosicionNaveActual, FRotator::ZeroRotator);
 
-			}
-			float nuevaposicionBicho = ubicacionInicioNavesEnemigasBicho.X + 300.0f;
-			for (int j = 0; j < 6; j++) {
-
-				FVector PosicionNaveActual = FVector(nuevaposicionBicho, ubicacionInicioNavesEnemigasBicho.Y + j * 200, ubicacionInicioNavesEnemigasBicho.Z);
-				ANaveEnemiga* NuevaNaveBicho = ANaveEnemigaBichoFactory::CrearNave("Bicho", World, PosicionNaveActual, FRotator::ZeroRotator);
-
-
-			}
-			float nuevaposicionAbeja = ubicacionInicioNavesEnemigasAbeja.X + 300.0f;
-			for (int j = 0; j < 6; j++) {
-
-				FVector PosicionNaveActual = FVector(nuevaposicionAbeja, ubicacionInicioNavesEnemigasAbeja.Y + j * 200, ubicacionInicioNavesEnemigasAbeja.Z);
-				ANaveEnemiga* NuevaNaveAbeja = ANaveEnemigaAbejaFactory::CrearNave("Abeja", World, PosicionNaveActual, FRotator::ZeroRotator);
-			}
-
-			float nuevaposicionMariposa = ubicacionInicioNavesEnemigasMariposa.X + 300.0f;
-			for (int j = 0; j < 6; j++) {
-
-				FVector PosicionNaveActual = FVector(nuevaposicionMariposa, ubicacionInicioNavesEnemigasMariposa.Y + j * 200, ubicacionInicioNavesEnemigasMariposa.Z);
-				ANaveEnemiga* NuevaNaveMariposa = ANaveEnemigaMariposaFactory::CrearNave("Mariposa", World, PosicionNaveActual, FRotator::ZeroRotator);
-
-
-			}
-			float nuevaposicionAbejaComun = ubicacionInicioNavesEnemigasAbejaComun.X + 300.0f;
-			for (int j = 0; j < 6; j++) {
-
-				FVector PosicionNaveActual = FVector(nuevaposicionAbejaComun, ubicacionInicioNavesEnemigasAbejaComun.Y + j * 200, ubicacionInicioNavesEnemigasAbejaComun.Z);
-				ANaveEnemiga* NuevaNaveAbejaComun = ANaveEnemigaAbejaFactory::CrearNave("AbejaComun", World, PosicionNaveActual, FRotator::ZeroRotator);
 			}
 		}
 	}
@@ -132,10 +97,58 @@ void AFacadeGenerador::FaabricarBuider()
 
 void AFacadeGenerador::FabricarNavesAtaque()
 {
+	// spawneo naves enemigas
+	FVector ubicacionInicioNavesEnemigasAbeja = FVector(800.0f, -900.0f, 250.f);
+	FVector ubicacionInicioNavesEnemigasMariposa = FVector(1000.0f, -900.0f, 250.f);
+
+	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
+
+
+	UWorld* const World = GetWorld();
+	if (World != nullptr)
+	{
+		for (int i = 0; i < 6; i++) {
+			float nuevaposicionAbeja = ubicacionInicioNavesEnemigasAbeja.X + 300.0f;
+			for (int j = 0; j < 6; j++) {
+
+				FVector PosicionNaveActual = FVector(nuevaposicionAbeja, ubicacionInicioNavesEnemigasAbeja.Y + j * 200, ubicacionInicioNavesEnemigasAbeja.Z);
+				ANaveEnemiga* NuevaNaveAbeja = ANaveEnemigaAbejaFactory::CrearNave("Abeja", World, PosicionNaveActual, FRotator::ZeroRotator);
+			}
+
+			float nuevaposicionMariposa = ubicacionInicioNavesEnemigasMariposa.X + 300.0f;
+			for (int j = 0; j < 6; j++) {
+
+				FVector PosicionNaveActual = FVector(nuevaposicionMariposa, ubicacionInicioNavesEnemigasMariposa.Y + j * 200, ubicacionInicioNavesEnemigasMariposa.Z);
+				ANaveEnemiga* NuevaNaveMariposa = ANaveEnemigaMariposaFactory::CrearNave("Mariposa", World, PosicionNaveActual, FRotator::ZeroRotator);
+
+
+			}
+		}
+	}
 }
 
 void AFacadeGenerador::FabricarNavesDisparo()
 {
+	// spawneo naves enemigas
+	FVector ubicacionInicioNavesEnemigasBicho = FVector(600.0f, -900.0f, 250.f);
+
+	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
+
+
+	UWorld* const World = GetWorld();
+	if (World != nullptr)
+	{
+		for (int i = 0; i < 6; i++) {
+			float nuevaposicionBicho = ubicacionInicioNavesEnemigasBicho.X + 300.0f;
+			for (int j = 0; j < 6; j++) {
+
+				FVector PosicionNaveActual = FVector(nuevaposicionBicho, ubicacionInicioNavesEnemigasBicho.Y + j * 200, ubicacionInicioNavesEnemigasBicho.Z);
+				ANaveEnemiga* NuevaNaveBicho = ANaveEnemigaBichoFactory::CrearNave("Bicho", World, PosicionNaveActual, FRotator::ZeroRotator);
+
+
+			}
+		}
+	}
 }
 
 

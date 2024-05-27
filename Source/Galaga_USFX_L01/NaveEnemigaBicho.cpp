@@ -16,7 +16,7 @@ ANaveEnemigaBicho::ANaveEnemigaBicho()
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 	PrimaryActorTick.bCanEverTick = true;
 	GetActorRelativeScale3D();
-	SetActorScale3D(FVector(1.5f, 1.5f, 1.5f));
+	SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));
 
 	bCanFire = false;//puede disparar
 
@@ -42,7 +42,7 @@ void ANaveEnemigaBicho::Tick(float DeltaTime)
 	Mover(DeltaTime);
 	//Disparar();
 	
-	//
+	//DISPAROS
 	TiempoTranscurrido++;
 	if (TiempoTranscurrido > 300) {
 		UWorld* const World = GetWorld();
@@ -130,18 +130,3 @@ void ANaveEnemigaBicho::Disparar()
 	//}
 	
 }
-
-
-//
-//TiempoTranscurrido++;
-//if (TiempoTranscurrido > 50) {
-//	UWorld* const World = GetWorld();
-//	if (World != nullptr)
-//	{
-//		FVector PosicionProyectilEnemigo = GetActorLocation() + FVector(0.0f, 0.0f, 0.0f); //posicion del proyectil enemigo
-//		World->SpawnActor <AProyectilEnemigo>(PosicionProyectilEnemigo, FRotator::ZeroRotator); //spawneo proyectil
-//
-//	}
-//	TiempoTranscurrido = 0;
-//
-//}

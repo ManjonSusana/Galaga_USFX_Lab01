@@ -11,7 +11,7 @@ ANaveEnemigaTransporte::ANaveEnemigaTransporte()
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 	PrimaryActorTick.bCanEverTick = true;
 	GetActorRelativeScale3D();
-	SetActorScale3D(FVector(1.5f, 1.5f, 1.5f));
+	SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));
 
 	MoviendoseALaIzquierda = true;
 }

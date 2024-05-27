@@ -19,8 +19,16 @@ public:
 
 
 	ANaveEnemigaAbeja();
+	
+
 	FORCEINLINE int GetCaniones() const { return caniones; }
 	FORCEINLINE void SetCaniones(int cantidad) {caniones = cantidad;}
+private:
+	float JumpHeight;  // Altura del salto
+	float JumpSpeed;   // Velocidad del salto
+	float JumpTime;    // Tiempo actual del salto
+
+	float TiempoCambio;
 
 
 protected:
@@ -34,9 +42,12 @@ public:
 protected:
 
 	virtual void Mover(float DeltaTime);
+	void Saltar(float DeltaTime);
+	
+private:
 
-	virtual void Disparar();
-	virtual void Atacar();
-	virtual void Escapar();
+	virtual void Disparar() {};
+	virtual void Atacar() {};
+	virtual void Escapar() {};
 
 };

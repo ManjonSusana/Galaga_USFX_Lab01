@@ -55,7 +55,7 @@ AGalaga_USFX_L01Pawn::AGalaga_USFX_L01Pawn()
 	bCanFire = true;
 
 	//salud
-	Vidas = 10.0f;
+	Vidas = 1000.0f;
 
 
 	MiInventario = CreateDefaultSubobject<UComponenteInventario>("MiInventario");
@@ -195,6 +195,11 @@ void AGalaga_USFX_L01Pawn::RecibirDano(int dano)
 	}
 }
 
+void AGalaga_USFX_L01Pawn::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
 void AGalaga_USFX_L01Pawn::DropItem()
 {
 	if (MiInventario->CurrentInventory.Num() == 0)
@@ -257,10 +262,10 @@ void AGalaga_USFX_L01Pawn::TakeItemArma(ACapsulaArma* InventarioItemArma)
 	InventarioItemArma->PickUp();
 	MiInventarioArma->AgregarAlInventarioArma(InventarioItemArma);
 	//Para la mejora del disparo mas rapido
-	FireRate = FireRate* 0.08f;
+	FireRate = FireRate* 0.05f;
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Disparo Rapido"));
 	//Disparo normal
-	GetWorld()->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AGalaga_USFX_L01Pawn::DisparoNormal, 5.0);
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AGalaga_USFX_L01Pawn::DisparoNormal, 2.0);
 
 	
 
