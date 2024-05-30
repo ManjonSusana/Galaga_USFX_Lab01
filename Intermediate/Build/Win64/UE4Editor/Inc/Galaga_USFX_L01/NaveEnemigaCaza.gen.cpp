@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 	GALAGA_USFX_L01_API UClass* Z_Construct_UClass_ANaveEnemigaCaza();
 	GALAGA_USFX_L01_API UClass* Z_Construct_UClass_ANaveEnemiga();
 	UPackage* Z_Construct_UPackage__Script_Galaga_USFX_L01();
+	GALAGA_USFX_L01_API UClass* Z_Construct_UClass_USubscriptorEnemigo_NoRegister();
 // End Cross Module References
 	void ANaveEnemigaCaza::StaticRegisterNativesANaveEnemigaCaza()
 	{
@@ -36,6 +37,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Velocidad;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -45,8 +47,10 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANaveEnemigaCaza_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "//class ATorreEnemiga_2;\n" },
 		{ "IncludePath", "NaveEnemigaCaza.h" },
 		{ "ModuleRelativePath", "NaveEnemigaCaza.h" },
+		{ "ToolTip", "class ATorreEnemiga_2;" },
 	};
 #endif
 #if WITH_METADATA
@@ -61,6 +65,9 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANaveEnemigaCaza_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANaveEnemigaCaza_Statics::NewProp_Velocidad,
 	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ANaveEnemigaCaza_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_USubscriptorEnemigo_NoRegister, (int32)VTABLE_OFFSET(ANaveEnemigaCaza, ISubscriptorEnemigo), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ANaveEnemigaCaza_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ANaveEnemigaCaza>::IsAbstract,
 	};
@@ -71,11 +78,11 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_ANaveEnemigaCaza_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_ANaveEnemigaCaza_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_ANaveEnemigaCaza_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ANaveEnemigaCaza_Statics::Class_MetaDataParams))
 	};
@@ -88,7 +95,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaCaza() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANaveEnemigaCaza, 3061850634);
+	IMPLEMENT_CLASS(ANaveEnemigaCaza, 3929039974);
 	template<> GALAGA_USFX_L01_API UClass* StaticClass<ANaveEnemigaCaza>()
 	{
 		return ANaveEnemigaCaza::StaticClass();

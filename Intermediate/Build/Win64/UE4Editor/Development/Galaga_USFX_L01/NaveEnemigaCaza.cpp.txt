@@ -4,6 +4,8 @@ C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\Nav
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\ComponenteMovimiento.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ComponenteMovimiento.generated.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemiga.generated.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\SubscriptorEnemigo.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\SubscriptorEnemigo.generated.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaCaza.generated.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\Galaga_USFX_L01Projectile.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Galaga_USFX_L01Projectile.generated.h
@@ -39,10 +41,17 @@ C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\U
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\CapsulaVida.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\CapsulaVida.generated.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ComponenteInventario.generated.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\IEstadoPawn.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\IEstadoPawn.generated.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Galaga_USFX_L01Pawn.generated.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ProyectilEnemigo.generated.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\FacadeDisparos.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\FacadeDisparos.generated.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\Publicador.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Publicador.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\EngineUtils.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\TorreEnemiga2.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\TorreEnemiga.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\TorreEnemiga.generated.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\TorreEnemiga2.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h

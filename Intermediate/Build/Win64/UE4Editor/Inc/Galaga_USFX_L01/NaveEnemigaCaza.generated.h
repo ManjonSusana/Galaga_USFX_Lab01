@@ -13,28 +13,30 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GALAGA_USFX_L01_NaveEnemigaCaza_generated_h
 
-#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_SPARSE_DATA
-#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_RPC_WRAPPERS
-#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_RPC_WRAPPERS_NO_PURE_DECLS
-#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_INCLASS_NO_PURE_DECLS \
+#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_SPARSE_DATA
+#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_RPC_WRAPPERS
+#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANaveEnemigaCaza(); \
 	friend struct Z_Construct_UClass_ANaveEnemigaCaza_Statics; \
 public: \
 	DECLARE_CLASS(ANaveEnemigaCaza, ANaveEnemiga, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Galaga_USFX_L01"), NO_API) \
-	DECLARE_SERIALIZER(ANaveEnemigaCaza)
+	DECLARE_SERIALIZER(ANaveEnemigaCaza) \
+	virtual UObject* _getUObject() const override { return const_cast<ANaveEnemigaCaza*>(this); }
 
 
-#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_INCLASS \
+#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesANaveEnemigaCaza(); \
 	friend struct Z_Construct_UClass_ANaveEnemigaCaza_Statics; \
 public: \
 	DECLARE_CLASS(ANaveEnemigaCaza, ANaveEnemiga, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Galaga_USFX_L01"), NO_API) \
-	DECLARE_SERIALIZER(ANaveEnemigaCaza)
+	DECLARE_SERIALIZER(ANaveEnemigaCaza) \
+	virtual UObject* _getUObject() const override { return const_cast<ANaveEnemigaCaza*>(this); }
 
 
-#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_STANDARD_CONSTRUCTORS \
+#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ANaveEnemigaCaza(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ANaveEnemigaCaza) \
@@ -47,7 +49,7 @@ private: \
 public:
 
 
-#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_ENHANCED_CONSTRUCTORS \
+#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ANaveEnemigaCaza(ANaveEnemigaCaza&&); \
@@ -58,31 +60,31 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANaveEnemigaCaza)
 
 
-#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_PRIVATE_PROPERTY_OFFSET \
+#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Velocidad() { return STRUCT_OFFSET(ANaveEnemigaCaza, Velocidad); }
 
 
-#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_10_PROLOG
-#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_GENERATED_BODY_LEGACY \
+#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_11_PROLOG
+#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_PRIVATE_PROPERTY_OFFSET \
-	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_SPARSE_DATA \
-	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_RPC_WRAPPERS \
-	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_INCLASS \
-	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_STANDARD_CONSTRUCTORS \
+	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_PRIVATE_PROPERTY_OFFSET \
+	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_SPARSE_DATA \
+	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_RPC_WRAPPERS \
+	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_INCLASS \
+	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_GENERATED_BODY \
+#define Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_PRIVATE_PROPERTY_OFFSET \
-	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_SPARSE_DATA \
-	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_INCLASS_NO_PURE_DECLS \
-	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_13_ENHANCED_CONSTRUCTORS \
+	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_PRIVATE_PROPERTY_OFFSET \
+	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_SPARSE_DATA \
+	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_INCLASS_NO_PURE_DECLS \
+	Galaga_USFX_LAB01_Source_Galaga_USFX_L01_NaveEnemigaCaza_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

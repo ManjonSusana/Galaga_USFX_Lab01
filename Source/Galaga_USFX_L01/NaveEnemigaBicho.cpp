@@ -42,19 +42,19 @@ void ANaveEnemigaBicho::Tick(float DeltaTime)
 	Mover(DeltaTime);
 	//Disparar();
 	
-	//DISPAROS
-	TiempoTranscurrido++;
-	if (TiempoTranscurrido > 300) {
-		UWorld* const World = GetWorld();
-		if (World != nullptr)
-		{
-			FVector PosicionProyectilEnemigo = GetActorLocation() + FVector(0.0f, 0.0f, 0.0f); //posicion del proyectil enemigo
-			World->SpawnActor <AProyectilEnemigo>(PosicionProyectilEnemigo, FRotator::ZeroRotator); //spawneo proyectil
-	
-		}
-		TiempoTranscurrido = 0;
-	
-	}
+	////DISPAROS
+	//TiempoTranscurrido++;
+	//if (TiempoTranscurrido > 300) {
+	//	UWorld* const World = GetWorld();
+	//	if (World != nullptr)
+	//	{
+	//		FVector PosicionProyectilEnemigo = GetActorLocation() + FVector(0.0f, 0.0f, 0.0f); //posicion del proyectil enemigo
+	//		World->SpawnActor <AProyectilEnemigo>(PosicionProyectilEnemigo, FRotator::ZeroRotator); //spawneo proyectil
+	//
+	//	}
+	//	TiempoTranscurrido = 0;
+	//
+	//}
 
 
 	

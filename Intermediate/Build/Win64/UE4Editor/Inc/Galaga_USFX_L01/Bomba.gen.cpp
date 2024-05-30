@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeBomba() {}
 // Cross Module References
 	GALAGA_USFX_L01_API UClass* Z_Construct_UClass_ABomba_NoRegister();
 	GALAGA_USFX_L01_API UClass* Z_Construct_UClass_ABomba();
-	GALAGA_USFX_L01_API UClass* Z_Construct_UClass_AProyectilEnemigo();
+	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Galaga_USFX_L01();
 // End Cross Module References
 	void ABomba::StaticRegisterNativesABomba()
@@ -35,7 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeBomba() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_ABomba_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_AProyectilEnemigo,
+		(UObject* (*)())Z_Construct_UClass_AActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_Galaga_USFX_L01,
 	};
 #if WITH_METADATA
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeBomba() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABomba, 3023164456);
+	IMPLEMENT_CLASS(ABomba, 1467587056);
 	template<> GALAGA_USFX_L01_API UClass* StaticClass<ABomba>()
 	{
 		return ABomba::StaticClass();

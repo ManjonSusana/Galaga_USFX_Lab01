@@ -23,16 +23,16 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-private:
-	//Array de municion 
-	TArray<AActor*> municion;
-
-	class ABomba* bomba;
-	class ALaser* laser;
-	class AFoton* foton;
-	//facade adicionla
-	class AFacadeAdRecargar* recargar;
-
-public:
-	void launch();  //LANZAR DISPARO
+//private:
+//	//Array de municion 
+//	TArray<AActor*> municion;
+//
+//	class ABomba* bomba;
+//	class ALaser* laser;
+//	class AFoton* foton;
+//	//facade adicionla
+//	class AFacadeAdRecargar* recargar;
+//
+//public:
+//	void launch();  //LANZAR DISPARO
 };

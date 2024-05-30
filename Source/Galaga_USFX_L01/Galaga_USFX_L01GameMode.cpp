@@ -1,6 +1,7 @@
 #include "Galaga_USFX_L01GameMode.h"
 #include "Galaga_USFX_L01Pawn.h"
 #include "ComponenteMovimiento.h"
+#include "Publicador.h"
 #include "FacadeGenerador.h"
 
 AGalaga_USFX_L01GameMode::AGalaga_USFX_L01GameMode() {
@@ -20,10 +21,12 @@ void AGalaga_USFX_L01GameMode::BeginPlay() {
 	Facade= GetWorld()->SpawnActor<AFacadeGenerador>(AFacadeGenerador::StaticClass());
 	//solo Fabrica de de las naves Enemiags
 	Facade-> FabricarNaves();
-	Facade->FaabricarBuider();
-	Facade->FabricarNavesAtaque();
-	Facade->FabricarNavesDisparo();
+	Facade->ConstruirNaveMejoras();
 	//solo de las torres enemigas
 	Facade-> TorresEnemigas();
+
+	//instanciando 
+	Publicador = GetWorld()->SpawnActor<APublicador>(APublicador::StaticClass());
+
 
 }

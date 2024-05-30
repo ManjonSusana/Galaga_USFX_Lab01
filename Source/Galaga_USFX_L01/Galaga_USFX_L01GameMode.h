@@ -22,9 +22,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	//Facade Generador
 	class AFacadeGenerador* Facade;
-
-
+	//observer 
+	class APublicador* Publicador;
 };
 
 

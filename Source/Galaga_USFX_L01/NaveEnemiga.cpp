@@ -43,4 +43,9 @@ void ANaveEnemiga::Tick(float DeltaTime)
 
 }
 
+void ANaveEnemiga::SetTorreEnemiga_2(APublicador* _publicador)
+{
+	//publicador = _publicador;
+}
+
 

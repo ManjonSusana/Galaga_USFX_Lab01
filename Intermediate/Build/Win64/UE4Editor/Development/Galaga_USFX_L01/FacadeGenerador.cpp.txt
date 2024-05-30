@@ -47,3 +47,5 @@ C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\Tor
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\TorreEnemiga1.generated.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\TorreEnemiga2.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\TorreEnemiga2.generated.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\Publicador.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Publicador.generated.h

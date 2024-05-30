@@ -37,16 +37,22 @@ private:
 	class ACapsulasArma* CapsulasArma01;
 	class ACapsulasVida* CapsulasVida01;
 
+	//Observer
+	class ATorreEnemiga2* torre2;
+	class APublicador* publicador;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void FabricarNaves();
-	void FaabricarBuider();
-	void FabricarNavesAtaque();
-	void FabricarNavesDisparo();
-
 public:
+	//Fabricra Nave Enemigas
+	void FabricarNaves();
+
+	//Fabrica Nave Mejoras
+	void ConstruirNaveMejoras();
+
+	//Torres Enemigas
 	void TorresEnemigas();
 private:
 

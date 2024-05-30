@@ -2,9 +2,9 @@
 
 
 #include "FacadeAdRecargar.h"
-#include "Bomba.h"
-#include "Laser.h"
-#include "Foton.h"
+//#include "Bomba.h"
+//#include "Laser.h"
+//#include "Foton.h"
 
 // Sets default values
 AFacadeAdRecargar::AFacadeAdRecargar()
@@ -28,22 +28,22 @@ void AFacadeAdRecargar::Tick(float DeltaTime)
 
 }
 
-TArray<AActor*> AFacadeAdRecargar::recargarmunicion()
-{
-	for (int i = 0; i < 15; i++) 
-	{//quiero almacenar en el array de manera aleatoria los 3 tipos de municion
-		if (i % 5 == 0 || i == 0) {
-			municionAleatoria = rand() % 2;
-		}
-		if (municionAleatoria == 0) {
-			municiones.Add(GetWorld()->SpawnActor<ABomba>(ABomba::StaticClass()));
-		}
-		else if (municionAleatoria == 1) {
-			municiones.Add(GetWorld()->SpawnActor<ALaser>(ALaser::StaticClass()));
-		}
-		else if (municionAleatoria == 2) {
-			municiones.Add(GetWorld()->SpawnActor<AFoton>(AFoton::StaticClass()));
-		}
-	}
-	return municiones;
-}
+//TArray<AActor*> AFacadeAdRecargar::recargarmunicion()
+//{
+//	for (int i = 0; i < 15; i++) 
+//	{//quiero almacenar en el array de manera aleatoria los 3 tipos de municion
+//		if (i % 5 == 0 || i == 0) {
+//			municionAleatoria = rand() % 2;
+//		}
+//		if (municionAleatoria == 0) {
+//			municiones.Add(GetWorld()->SpawnActor<ABomba>(ABomba::StaticClass()));
+//		}
+//		else if (municionAleatoria == 1) {
+//			municiones.Add(GetWorld()->SpawnActor<ALaser>(ALaser::StaticClass()));
+//		}
+//		else if (municionAleatoria == 2) {
+//			municiones.Add(GetWorld()->SpawnActor<AFoton>(AFoton::StaticClass()));
+//		}
+//	}
+//	return municiones;
+//}

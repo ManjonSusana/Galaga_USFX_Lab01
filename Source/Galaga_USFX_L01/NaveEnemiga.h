@@ -68,11 +68,6 @@ public:
 	FORCEINLINE void SetEnergia(float _energia) { energia = _energia; }
 
 
-
-
-
-
-
 public:
 	// Sets default values for this actor's properties
 	ANaveEnemiga();
@@ -93,4 +88,7 @@ protected:  //creacion clase abstracta
 	void Atacar() PURE_VIRTUAL(ANaveEnemiga::Atacar, );
 	void Escapar() PURE_VIRTUAL(ANaveEnemiga::Escapar, );
 	void Botar() PURE_VIRTUAL(ANaveEnemiga::Botar, );
+public:
+	virtual void SetTorreEnemiga_2(class APublicador* _publicador);
+
 };

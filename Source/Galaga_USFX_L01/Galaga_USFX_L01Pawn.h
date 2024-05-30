@@ -1,5 +1,4 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -13,6 +12,7 @@
 #include "CapsulaMotor.h"
 #include "CapsulaArma.h"
 #include "CapsulaVida.h"
+#include "IEstadoPawn.h"
 #include "Galaga_USFX_L01Pawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -22,6 +22,24 @@ class AGalaga_USFX_L01Pawn : public APawn
 	
 private:
 	int Vidas; // Número de vidas del Pawn 
+	UPROPERTY(VisibleAnywhere)
+	FVector posicionInicial;
+	//declaracion de los estados 
+	IIEstadoPawn* estadoNormal;
+	IIEstadoPawn* estadoDanado;
+	IIEstadoPawn* estadoAturdido;
+	IIEstadoPawn* estadoConfundido;
+	//ESTADO ACTUAL
+	IIEstadoPawn* estadoActual;
+	float cambioEstado = 0;
+	bool moverse = true;
+public:
+	//Metodos estados del pawn para el cammbio de estado
+	void PawnEstadoNormal();
+	void PawnEstadoDanado();
+	void PawnEstadoAturdido();
+	void PawnEstadoConfundido();
+	void controles(bool activo = true);//Activar o desactivar controles
 
 	/* The mesh component */
 	UPROPERTY(Category = Mesh, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
@@ -85,7 +103,11 @@ public:
 	static const FName FireForwardBinding;
 	static const FName FireRightBinding;
 
+	int GetVida()const { return Vidas; }
+	FORCEINLINE void SetVida(int _vidas) { Vidas = _vidas; }
+
 	void RecibirDano(int Dano); // Método para recibir daño 
+	void RestarVida();
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

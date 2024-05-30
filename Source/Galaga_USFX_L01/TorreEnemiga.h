@@ -1,4 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
+
 #pragma once
 
 #include "CoreMinimal.h"
@@ -15,10 +16,6 @@ public:
 	ATorreEnemiga();
 protected:
 	UStaticMeshComponent* TorreMesh;
-
-	
-
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -29,8 +26,12 @@ public:
 private:
 	void CrearEvento(const FString& Evento, class AFacadeGenerador* Facade);
 
-public:
+	/*virtual void CambioEnergia();
+	ACCESOSRES A LA ENERGIA DE LA TORRE
+	void SetEnergiaTorre(int _energia) { energia = _energia; }*/
 
+public:
+	//metodos virtuales puros
 	virtual void CrearTorreEnemiga(class AFacadeGenerador* Fachada) PURE_VIRTUAL(ATorreEnemiga::CrearTorreEnemiga, );
 	virtual void AnadirMovimiento() PURE_VIRTUAL(ATorreEnemiga::AnadirMovimiento, );
 	virtual void AnadirDisparo() PURE_VIRTUAL(ATorreEnemiga::AnadirDisparo, );

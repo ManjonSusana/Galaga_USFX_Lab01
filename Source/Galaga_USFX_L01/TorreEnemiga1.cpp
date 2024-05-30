@@ -10,11 +10,11 @@ ATorreEnemiga1::ATorreEnemiga1()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/MALLAS/TORRE1/65d477fbb955_edificios_del_futur.65d477fbb955_edificios_del_futur'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cube.Shape_Cube'"));
 	TorreMesh->SetStaticMesh(ShipMesh.Object);
 
 	GetActorRelativeScale3D();
-	SetActorScale3D(FVector(2.0f, 2.0f, 2.0f));
+	SetActorScale3D(FVector(1.5f, 1.5f, 1.05f));
 	
 	//ubicacion inicial
 	PosicionInicialTorre_1 = FVector(-800.0f, 1600.0f, 250.f);
@@ -38,6 +38,7 @@ void ATorreEnemiga1::BeginPlay()
 void ATorreEnemiga1::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
 	
 
 	if (verificacionMovimiento)
@@ -54,8 +55,8 @@ void ATorreEnemiga1::Tick(float DeltaTime)
 
 		SetActorLocation(CurrentLocation);
 
+		//GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Blue, FString::Printf(TEXT("LA TORRE SE MUEVEEE")));
 		
-		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Blue, FString::Printf(TEXT("LA TORRE SE MUEVEEE")));
 
 		
 	}
@@ -85,10 +86,10 @@ void ATorreEnemiga1::AnadirDisparo()
 {
 	
 	tiempoTranscurrido++;
-	if (tiempoTranscurrido>= 450.0f && tiempoTranscurrido<=500.0f) {
+	if (tiempoTranscurrido>= 490.0f && tiempoTranscurrido<=500.0f) {
 
 
-		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Yellow, FString::Printf(TEXT("LA TORRE DISOARRA")));
+		//GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Yellow, FString::Printf(TEXT("LA TORRE DISOARRA")));
 
 		verificacionDisparo = true;
 		if (verificacionDisparo)

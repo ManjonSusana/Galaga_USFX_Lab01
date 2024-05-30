@@ -13,12 +13,17 @@
 #include "Engine/EngineTypes.h"
 #include "Engine/StaticMesh.h"
 #include "Kismet/GameplayStatics.h"
+#include "EstadoAturdido.h"
+#include "EstadoConfundido.h"
+#include "EstadoDanado.h"
+#include "EstadoNormal.h"
 #include "Sound/SoundBase.h"
 
 const FName AGalaga_USFX_L01Pawn::MoveForwardBinding("MoveForward");
 const FName AGalaga_USFX_L01Pawn::MoveRightBinding("MoveRight");
 const FName AGalaga_USFX_L01Pawn::FireForwardBinding("FireForward");
 const FName AGalaga_USFX_L01Pawn::FireRightBinding("FireRight");
+
 
 AGalaga_USFX_L01Pawn::AGalaga_USFX_L01Pawn()
 {
@@ -55,7 +60,7 @@ AGalaga_USFX_L01Pawn::AGalaga_USFX_L01Pawn()
 	bCanFire = true;
 
 	//salud
-	Vidas = 1000.0f;
+	Vidas = 500.0f;
 
 
 	MiInventario = CreateDefaultSubobject<UComponenteInventario>("MiInventario");
@@ -111,39 +116,46 @@ void AGalaga_USFX_L01Pawn::crearBarrera()
 
 void AGalaga_USFX_L01Pawn::Tick(float DeltaSeconds)
 {
-	// Find movement direction
-	const float ForwardValue = GetInputAxisValue(MoveForwardBinding);
-	const float RightValue = GetInputAxisValue(MoveRightBinding);
+	if (moverse) {
+		// Find movement direction
+		const float ForwardValue = GetInputAxisValue(MoveForwardBinding);
+		const float RightValue = GetInputAxisValue(MoveRightBinding);
 
-	// Clamp max size so that (X=1, Y=1) doesn't cause faster movement in diagonal directions
-	const FVector MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
+		// Clamp max size so that (X=1, Y=1) doesn't cause faster movement in diagonal directions
+		const FVector MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
 
-	// Calculate  movement
-	const FVector Movement = MoveDirection * MoveSpeed * DeltaSeconds;
+		// Calculate  movement
+		const FVector Movement = MoveDirection * MoveSpeed * DeltaSeconds;
 
 
-	// If non-zero size, move this actor
-	if (Movement.SizeSquared() > 0.0f)
-	{
-		const FRotator NewRotation = Movement.Rotation();
-		FHitResult Hit(1.f);
-		RootComponent->MoveComponent(Movement, NewRotation, true, &Hit);
-
-		if (Hit.IsValidBlockingHit())
+		// If non-zero size, move this actor
+		if (Movement.SizeSquared() > 0.0f)
 		{
-			const FVector Normal2D = Hit.Normal.GetSafeNormal2D();
-			const FVector Deflection = FVector::VectorPlaneProject(Movement, Normal2D) * (1.f - Hit.Time);
-			RootComponent->MoveComponent(Deflection, NewRotation, true);
+			const FRotator NewRotation = Movement.Rotation();
+			FHitResult Hit(1.f);
+			RootComponent->MoveComponent(Movement, NewRotation, true, &Hit);
+
+			if (Hit.IsValidBlockingHit())
+			{
+				const FVector Normal2D = Hit.Normal.GetSafeNormal2D();
+				const FVector Deflection = FVector::VectorPlaneProject(Movement, Normal2D) * (1.f - Hit.Time);
+				RootComponent->MoveComponent(Deflection, NewRotation, true);
+			}
 		}
+
+		// Create fire direction vector
+		const float FireForwardValue = GetInputAxisValue(FireForwardBinding);
+		const float FireRightValue = GetInputAxisValue(FireRightBinding);
+		const FVector FireDirection = FVector(FireForwardValue, FireRightValue, 0.f);
+
+		// Try and fire a shot
+		FireShot(FireDirection);
+		cambioEstado += GetWorld()->GetDeltaSeconds();
 	}
-
-	// Create fire direction vector
-	const float FireForwardValue = GetInputAxisValue(FireForwardBinding);
-	const float FireRightValue = GetInputAxisValue(FireRightBinding);
-	const FVector FireDirection = FVector(FireForwardValue, FireRightValue, 0.f);
-
-	// Try and fire a shot
-	FireShot(FireDirection);
+	if (Vidas < 450) {
+		estadoActual->RegresarEstado();
+		//Destroy();
+	}
 }
 
 void AGalaga_USFX_L01Pawn::FireShot(FVector FireDirection)
@@ -198,6 +210,63 @@ void AGalaga_USFX_L01Pawn::RecibirDano(int dano)
 void AGalaga_USFX_L01Pawn::BeginPlay()
 {
 	Super::BeginPlay();
+	//posicionInicial = GetActorLocation(); 
+	posicionInicial = FVector(int(GetActorLocation().X), int(GetActorLocation().Y), int(GetActorLocation().Z));
+	//instanciando los estados 
+	PawnEstadoNormal();
+	FTimerHandle TimerHandle;
+	FTimerHandle TimerHandle1;
+	FTimerHandle TimerHandle2;
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AGalaga_USFX_L01Pawn::PawnEstadoConfundido, 5.0f, false);
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle1, this, &AGalaga_USFX_L01Pawn::PawnEstadoAturdido, 15.5f, false);
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle2, this, &AGalaga_USFX_L01Pawn::PawnEstadoDanado, 20.0f, false);
+
+}
+void AGalaga_USFX_L01Pawn::PawnEstadoNormal()
+{
+	estadoActual = GetWorld()->SpawnActor<AEstadoNormal>(AEstadoNormal::StaticClass());
+	estadoActual->EstablecerJugador(this);
+	//estadoActual = estadoNormal;
+	estadoActual->Normalizar(); //llamando al metodo
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Normal: ") + estadoActual->ObtenerEstado());
+}
+
+void AGalaga_USFX_L01Pawn::PawnEstadoDanado()
+{
+	estadoActual = GetWorld()->SpawnActor<AEstadoDanado>(AEstadoDanado::StaticClass());
+	estadoActual->EstablecerJugador(this);
+	//estadoActual = estadoDanado;
+	estadoActual->Danadar(); //llamando al metodo
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, TEXT("Danado: ") + estadoActual->ObtenerEstado());
+}
+
+void AGalaga_USFX_L01Pawn::PawnEstadoAturdido()
+{
+	estadoActual = GetWorld()->SpawnActor<AEstadoAturdido>(AEstadoAturdido::StaticClass());
+	estadoActual->EstablecerJugador(this);
+	//estadoActual = estadoAturdido;
+	estadoActual->Aturdir(); //llamando al metodo
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("Aturdido: ") + estadoActual->ObtenerEstado());
+}
+
+void AGalaga_USFX_L01Pawn::PawnEstadoConfundido()
+{
+	estadoActual = GetWorld()->SpawnActor<AEstadoConfundido>(AEstadoConfundido::StaticClass());
+	estadoActual->EstablecerJugador(this);
+	//estadoActual = estadoConfundido;
+	estadoActual->Confundir();//llamando al metodo
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Confundido: ") + estadoActual->ObtenerEstado());
+
+}
+
+void AGalaga_USFX_L01Pawn::controles(bool activo)
+{
+	moverse = activo;
+}
+void AGalaga_USFX_L01Pawn::RestarVida()
+{
+	Vidas--;
+
 }
 
 void AGalaga_USFX_L01Pawn::DropItem()

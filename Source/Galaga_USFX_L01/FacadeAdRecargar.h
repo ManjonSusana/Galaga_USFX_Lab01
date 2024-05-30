@@ -16,8 +16,8 @@ public:
 	AFacadeAdRecargar();
 
 private:
-	TArray<AActor*> municiones;
-	int municionAleatoria;
+	/*TArray<AActor*> municiones;
+	int municionAleatoria;*/
 
 protected:
 	// Called when the game starts or when spawned
@@ -27,5 +27,5 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	FORCEINLINE TArray<AActor*> recargarmunicion();
+	/*FORCEINLINE TArray<AActor*> recargarmunicion();*/
 };

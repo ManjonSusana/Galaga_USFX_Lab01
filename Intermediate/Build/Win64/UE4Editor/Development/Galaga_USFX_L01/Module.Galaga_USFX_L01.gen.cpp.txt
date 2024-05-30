@@ -9,40 +9,23 @@ C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\U
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/Barrera.gen.cpp
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/Barrera.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Barrera.generated.h
-C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/Bomba.gen.cpp
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/Bomba.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\ProyectilEnemigo.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\Galaga_USFX_L01Pawn.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerInput.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\GestureRecognizer.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\KeyState.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PlayerInput.generated.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\ComponenteBarrera.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ComponenteBarrera.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\ComponenteInventario.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\CapsulaMotor.h
+C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/CapsulaArma.gen.cpp
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/CapsulaArma.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\CapsulaMotor.generated.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\CapsulaArma.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\CapsulaArma.generated.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\CapsulaVida.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\CapsulaVida.generated.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ComponenteInventario.generated.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Galaga_USFX_L01Pawn.generated.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ProyectilEnemigo.generated.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Bomba.generated.h
-C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/CapsulaArma.gen.cpp
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/CapsulaMotor.gen.cpp
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/CapsulaMotor.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\CapsulaMotor.generated.h
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/CapsulaVida.gen.cpp
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/CapsulaVida.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\CapsulaVida.generated.h
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/ComponenteBarrera.gen.cpp
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/ComponenteBarrera.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ComponenteBarrera.generated.h
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/ComponenteInventario.gen.cpp
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/ComponenteInventario.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ComponenteInventario.generated.h
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/ComponenteMovimiento.gen.cpp
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/ComponenteMovimiento.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ComponenteMovimiento.generated.h
@@ -70,7 +53,6 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Galaga_USFX_L01GameMode.generated.h
-C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/Galaga_USFX_L01Pawn.gen.cpp
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/Galaga_USFX_L01Projectile.gen.cpp
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/Galaga_USFX_L01Projectile.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Galaga_USFX_L01Projectile.generated.h
@@ -113,21 +95,26 @@ C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\U
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/NaveEnemigaBichoVolador.gen.cpp
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/NaveEnemigaBichoVolador.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaBichoVolador.generated.h
-C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/NaveEnemigaCaza.gen.cpp
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/NaveEnemigaCaza.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaCaza.generated.h
-C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/NaveEnemigaCazaDisparos.gen.cpp
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/NaveEnemigaCazaDisparos.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaCazaDisparos.generated.h
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/NaveEnemigaCazaFactory.gen.cpp
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/NaveEnemigaCazaFactory.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaCazaFactory.generated.h
-C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/NaveEnemigaCazaFlechas.gen.cpp
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/NaveEnemigaCazaFlechas.h
-C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaCazaFlechas.generated.h
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/NaveEnemigaFactory.gen.cpp
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/NaveEnemigaMariposa.gen.cpp
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/NaveEnemigaMariposa.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\Galaga_USFX_L01Pawn.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerInput.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\GestureRecognizer.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\KeyState.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PlayerInput.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\IEstadoPawn.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\IEstadoPawn.generated.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Galaga_USFX_L01Pawn.generated.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaMariposa.generated.h
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/NaveEnemigaMariposaAsesina.gen.cpp
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/NaveEnemigaMariposaAsesina.h
@@ -163,12 +150,21 @@ C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/Niv
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NivelFacil.generated.h
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/PlanoNave.gen.cpp
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/ProyectilEnemigo.gen.cpp
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/ProyectilEnemigo.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ProyectilEnemigo.generated.h
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/Score.gen.cpp
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/Score.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Score.generated.h
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/SuperNave.gen.cpp
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/SuperNave.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\SuperNave.generated.h
+C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/TorreEnemiga.gen.cpp
+C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/TorreEnemiga1.gen.cpp
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/TorreEnemiga1.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\TorreEnemiga1.generated.h
+C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/TorreEnemiga2.gen.cpp
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/TorreEnemiga2.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\TorreEnemiga2.generated.h
 C:/Users/manjo/Desktop/GalagaFinall/Galaga_USFX_LAB01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/VidaNave.gen.cpp
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01/VidaNave.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\VidaNave.generated.h

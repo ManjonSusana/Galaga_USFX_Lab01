@@ -33,5 +33,7 @@ C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\U
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\CapsulaVida.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\CapsulaVida.generated.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ComponenteInventario.generated.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Source\Galaga_USFX_L01\IEstadoPawn.h
+C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\IEstadoPawn.generated.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Galaga_USFX_L01Pawn.generated.h
 C:\Users\manjo\Desktop\GalagaFinall\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ProyectilEnemigo.generated.h

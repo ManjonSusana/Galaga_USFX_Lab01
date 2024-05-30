@@ -1,5 +1,4 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -20,11 +19,13 @@ private:
 
 	float LimiteInferior;
 	float LimiteSuperior;
-	float tiempoTranscurrido;
+	float tiempoTranscurrido = 0.0f;
 	float Direccion; // 1 para derecha, -1 para izquierda
 
 	bool verificacionMovimiento = false;
 	bool verificacionDisparo = false;
+
+	int energia= 100;
 
 	//TArray<ATorreEnemiga1>Torre_1;
 
@@ -37,7 +38,14 @@ public:
 
 public:
 	virtual void CrearTorreEnemiga(class AFacadeGenerador* Fachada) override;
-	virtual void AnadirMovimiento() override;
-	virtual void AnadirDisparo() override;
+
+	int GetEnergiaTorre() { return energia; }
+	void SetEnergiaTorre(int _energia) { energia = _energia; }
+
+
+
+private:
+	virtual void AnadirMovimiento() override {};
+	virtual void AnadirDisparo() override {};
 	
 };

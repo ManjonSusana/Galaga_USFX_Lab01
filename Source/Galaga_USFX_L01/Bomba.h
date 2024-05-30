@@ -4,11 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "ProyectilEnemigo.h"
 #include "Bomba.generated.h"
 
 UCLASS()
-class GALAGA_USFX_L01_API ABomba : public AProyectilEnemigo
+class GALAGA_USFX_L01_API ABomba : public AActor
 {
 	GENERATED_BODY()
 	

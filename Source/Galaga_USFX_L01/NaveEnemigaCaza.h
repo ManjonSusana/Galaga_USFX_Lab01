@@ -4,11 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "NaveEnemiga.h"
+#include "SubscriptorEnemigo.h"
 #include "NaveEnemigaCaza.generated.h"
 
-
+//class ATorreEnemiga_2;
 UCLASS()
-class GALAGA_USFX_L01_API ANaveEnemigaCaza : public ANaveEnemiga
+class GALAGA_USFX_L01_API ANaveEnemigaCaza : public ANaveEnemiga, public ISubscriptorEnemigo
 {
 	GENERATED_BODY()
 
@@ -21,7 +22,7 @@ private:
 	int TiempoTranscurrido;
 
 	//fACADE DISPAROS 
-	class AFacadeDisparos* disparos; 
+	//class AFacadeDisparos* disparos; 
 
 	// Variables para el movimiento
 	FVector PosicionInicial;
@@ -50,6 +51,10 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Movimiento")
 	float Velocidad = 500.0f;
 
+private:
+	//UPROPERTY()
+	//class ATorreEnemiga_2* torre_2;
+
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -59,6 +64,18 @@ protected:
 	void Disparar();
 
 	FTimerHandle TimerHandle_ShotTimerExpired; // Timer para controlar el tiempo de disparo
+
+	bool Moverse = false;
+
+public:
+	virtual void ActualizarEnemigo() override;
+	virtual void SetTorreEnemiga_2(class APublicador* _publicador) override;
+	void FormacionNaves();
+
+	class APublicador* publicador;
+	class ATorreEnemiga2* torreEnemiga2;
+
+
 private:
 	void Atacar() {};
 	void Escapar() {};
